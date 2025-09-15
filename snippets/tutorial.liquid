@@ -14,3 +14,6 @@
 {% if undefinedVariable == nil %}
     <p>{{ product.tags }}</p>
 {% endif %}
+{% for tag in product.tags %}
+  <p>{{ tag }}</p>
+{% endfor %}
