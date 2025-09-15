@@ -38,7 +38,7 @@
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
     {% comment %} the tutorial folder must be in snippets
      for this to work {% endcomment %}
-    {% render "tutorial" %}
+    {% render "tutorial", product: all_products['the-3p-fulfilled-snowboard'] %}
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}
