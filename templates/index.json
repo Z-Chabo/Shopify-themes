@@ -279,9 +279,15 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "ajax_api_Mf8jwD": {
+      "type": "ajax-api",
+      "name": "AJAX API",
+      "settings": {}
     }
   },
   "order": [
+    "ajax_api_Mf8jwD",
     "hero_jVaWmY",
     "product_list_fa6P9H"
   ]
