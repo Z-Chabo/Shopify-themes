@@ -1,3 +1,10 @@
+<script>
+    async function fetchCart() {
+    const cartRequest= await fetch('/cart.js');
+    const cart= await cartRequest.json();
+    console.log(cart);
+}
+</script>
 {% schema %}
 {
     "name": "AJAX API",
