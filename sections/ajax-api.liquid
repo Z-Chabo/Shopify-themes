@@ -10,7 +10,7 @@
     return cart;
 }
 async function addToCart(){
-    const addToCartRequest=await fetch ("/cart/add.js", {
+    const addToCartRequest=await fetch ("/cart/add.js"), {
         method:"POST",
         //kind of data we are sending in the request body
         headers:{
