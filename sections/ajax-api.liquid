@@ -9,22 +9,20 @@
     cartContentDiv.textContent = `Cart's total items: ${cart.item_count}`;
     return cart;
 }
-async function addToCart(){
-    const addToCartRequest=await fetch ("/cart/add.js"), {
-        method:"POST",
-        //kind of data we are sending in the request body
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-        id:47404215697578,
-        quantity:2,
-        properties:{
-            "test":"test value"
-        }
+async function addToCart() {
+  const addToCartRequest = await fetch("/cart/add.js", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      id: 47404215697578,
+      quantity: 2,
+      properties: {
+        "test": "test value"
+      }
     })
-        
-}
+  });
 fetchCart();
 </script>
 {% schema %}
