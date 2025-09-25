@@ -12,7 +12,7 @@
         return cart;
     }
     async function updateCart(quantity){
-        const LINE_ITEM_KEY = "47404215697578:96111ab606997ec6563dccea470fd669";
+        const LINE_ITEM_KEY = '47404215697578:96111ab606997ec6563dccea470fd669';
 
         const updateCartRequest = await fetch(`/cart/update.js`, {
             method: "POST",
