@@ -11,6 +11,26 @@
         cartContentDiv.textContent = `Cart's total items: ${cart.item_count}`;
         return cart;
     }
+    async function updateCart(variantId,quantity){
+        const LINE_ITEM_KEY = "47404215697578:96111ab606997ec6563dccea470fd669";
+
+        const updateCartRequest = await fetch(`/cart/update.js`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                updates:
+                    {
+                        id:variantId,
+                        quantity: quantity,
+                        properties:{
+                            "test":"updated test value"
+                        },
+                    },
+            })
+        });
+    }
     async function addToCart() {
         const addToCartRequest = await fetch("/cart/add.js", {
             method: "POST",
