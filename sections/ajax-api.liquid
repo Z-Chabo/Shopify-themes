@@ -22,8 +22,7 @@
             body: JSON.stringify({
                 updates:
                     {
-                        id:variantId,
-                        quantity: quantity,
+                        [LINE_ITEM_KEY]: quantity,
                         properties:{
                             "test":"updated test value"
                         },
