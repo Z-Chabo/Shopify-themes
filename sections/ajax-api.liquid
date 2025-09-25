@@ -1,34 +1,36 @@
 <div class="cart-content"></div>
 <script>
     async function fetchCart() {
-    const cartRequest= await fetch('/cart.js');
-    const cart= await cartRequest.json();
-    // selects the div with the class cart-content
-    const cartContentDiv = document.querySelector('.cart-content');  
-    // replaces the text inside the div with the cart's item count 
-    cartContentDiv.textContent = `Cart's total items: ${cart.item_count}`;
-    return cart;
-}
-async function addToCart() {
-  const addToCartRequest = await fetch("/cart/add.js", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      id: 47404215697578,
-      quantity: 2,
-      properties: {
-        "test": "test value"
-      }
-    })
-  });
-fetchCart();
+        const cartRequest = await fetch('/cart.js');
+        const cart = await cartRequest.json();
+
+        // selects the div with the class cart-content
+        const cartContentDiv = document.querySelector('.cart-content');  
+
+        // replaces the text inside the div with the cart's item count 
+        cartContentDiv.textContent = `Cart's total items: ${cart.item_count}`;
+        return cart;
+    }
+    async function addToCart() {
+        const addToCartRequest = await fetch("/cart/add.js", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: 47404215697578,
+                quantity: 2,
+                properties: {
+                    "test": "test value"
+                }
+            })
+        });
+    }
 </script>
 {% schema %}
 {
     "name": "AJAX API",
-    "presets":[
+    "presets": [
         {
             "name": "AJAX API"
         }
